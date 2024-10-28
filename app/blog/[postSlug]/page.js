@@ -15,6 +15,20 @@ export default async function Post({ params }) {
   }
 
   const { title, excerpt, content, featuredImage, modified } = postData;
+<<<<<<< HEAD
+=======
+
+  // Log the featured image file if it exists
+  console.log(postData.featuredImage?.node?.mediaDetails?.file);
+  
+  // Get the dynamic part of the URL
+  const urlImage = featuredImage?.node?.mediaDetails?.file;
+  
+  // Combine the base URL and dynamic URL using a template literal
+  const imageUrl = `https://greenheroes.falm.ro/wp-content/uploads/${urlImage || ''}`;
+  
+  console.log(imageUrl);
+>>>>>>> 757edd9982a5392b8d76de566bd6b791274a38ce
 
   // Log the featured image file if it exists
   console.log(postData.featuredImage?.node?.mediaDetails?.file);
