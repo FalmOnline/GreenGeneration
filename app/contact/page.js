@@ -12,9 +12,9 @@ const ContactForm = () => {
   const [status, setStatus] = useState({ loading: false, message: '', type: '' });
 
   const validationSchema = Yup.object({
-    firstName: Yup.string().required('🌿 Eroule, nu uita să completezi acest câmp! 🌿'),
-    email: Yup.string().email('Adresă de email invalidă').required('🌿 Eroule, nu uita să completezi acest câmp! 🌿'),
-    message: Yup.string().required('🌿 Eroule, nu uita să completezi acest câmp! 🌿'),
+    firstName: Yup.string().required('🌿 Nu uita să completezi acest câmp! 🌿'),
+    email: Yup.string().email('Adresă de email invalidă').required('🌿 Nu uita să completezi acest câmp! 🌿'),
+    message: Yup.string().required('🌿 Nu uita să completezi acest câmp! 🌿'),
     consent: Yup.boolean().oneOf([true], '🌱 Pentru a ne putea uni forțele în lupta pentru un viitor mai verde, trebuie să fii de acord cu prelucrarea datelor tale. Împreună suntem mai puternici! 💪'),
     privacy: Yup.boolean().oneOf([true], '🌱 Pentru a ne putea uni forțele în lupta pentru un viitor mai verde, trebuie să fii de acord cu prelucrarea datelor tale. Împreună suntem mai puternici! 💪'),
   });
@@ -62,20 +62,19 @@ const ContactForm = () => {
   });
 
   return (
-    <section className="bg-white lg:w-screen lg:h-screen flex lg:flex-col items-center relative">
+    <section className=" lg:w-screen  flex lg:flex-col items-center relative">
       <div className='hidden lg:block w-screen h-full lg:absolute z-0'>
-        <div className="w-1/2 h-full bg-[url('/bg-contact-page.jpg')] bg-no-repeat bg-cover bg-center"></div>
+        <div className="w-1/2 h-full"></div>
         <div className='w-1/2'></div>
       </div>
-      <div className='lg:container 2xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-col lg:flex-row z-20'>
-        <div className="bg-[url('/bg-contact-page.jpg')] lg:bg-none lg:w-1/2 p-8 h-[380px] flex flex-col justify-center">
-         <h1>Contact</h1>
-         <p className='mt-8'>🌿 Suntem aici pentru a salva planeta, împreună cu tine! 🌿 <br />
-         Ne poți contacta pentru orice întrebare, colaborare sau sugestie.</p>
-        </div>
-        <div className='lg:w-1/2 p-8 lg:p-10 bg-white'>
-          <h3 className='pb-4 mt-3 leading-none'>Scrie-ne un mesaj:</h3>
-          <form className="contact-form flex flex-col gap-3" onSubmit={formik.handleSubmit} noValidate>
+      <div className='container xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-col lg:flex-row z-20 h-full'>
+        <div className='lg:w-1/2 p-8 lg:p-10 flex flex-col mt-16'>
+        <h1>Contact</h1>
+         <p className='mt-8'>🌍 Împreună putem proteja planeta! 🌍
+         <br />
+         Suntem aici pentru orice întrebare, colaborare sau sugestie pentru un viitor mai verde.</p>
+
+          <form className="contact-form flex flex-col gap-3 mt-10" onSubmit={formik.handleSubmit} noValidate>
             <input
               type="text"
               id="firstName"
@@ -173,7 +172,10 @@ const ContactForm = () => {
             }
           `}</style>
 
-            <Map />
+  
+        </div>
+        <div className='lg:w-1/2 flex flex-col justify-center'>
+          <div className="h-full lg:h-4/5 rounded-3xl overflow-hidden xl:mx-0 mx-4 min-h-96"><Map /></div>
         </div>
       </div>
     </section>

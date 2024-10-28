@@ -1,29 +1,35 @@
-
 import localFont from 'next/font/local';
 
-export const almarai = localFont({
+export const ibmPlexSerif = localFont({
   src: [
     {
-      path: '../public/fonts/Almarai/Almarai-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Almarai/Almarai-Regular.woff2',
+      path: '../public/fonts/IBM_Plex_Serif/IBMPlexSerif-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Almarai/Almarai-Bold.woff2',
+      path: '../public/fonts/IBM_Plex_Serif/IBMPlexSerif-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
+  ],
+  variable: '--font-ibm-plex-serif',
+  display: 'swap',
+});
+
+export const libreBaskerville = localFont({
+  src: [
     {
-      path: '../public/fonts/Almarai/Almarai-ExtraBold.woff2',
-      weight: '800',
+      path: '../public/fonts/Libre_Baskerville/LibreBaskerville-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Libre_Baskerville/LibreBaskerville-Bold.woff2',
+      weight: '700',
       style: 'normal',
     },
   ],
-  variable: '--font-almarai',
-  display: 'swap', // Optional: improves loading performance
+  variable: '--font-libre-baskerville',
+  display: 'swap',
 });

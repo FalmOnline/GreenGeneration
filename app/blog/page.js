@@ -59,15 +59,15 @@ return (
 <main className="mb-12">
 {/* Banner */}
 <div className="bg-gh-green flex items-center justify-center mb-12  flex-col">
-<div className="md:container lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto h-[380px] flex flex-col justify-center p-2 xs:p-8">
+<div className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto h-[380px] flex flex-col justify-center p-2 xs:p-8">
 <h1>Resurse educaționale</h1>
 </div>
 </div>
 
-<div className="md:container lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-col-reverse lg:flex-row px-2 lg:px-4 xl:px-0">
+<div className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-col-reverse lg:flex-row px-2 lg:px-4 xl:px-0">
 {/* Render the categories menu */}
-    <nav className="w-full lg:w-3/12 bg-gray-100 lg:bg-white rounded-md lg:rounded-none pb-8 px-4 lg:pb-0 lg:px-0">
-        <h4 className="text-gh-dark-grey text-lg font-bold mb-4 text-center lg:text-left">Categorii:</h4>
+    <nav className="w-full lg:w-3/12 bg-gg-bej-dark lg:bg-gg-bej rounded-md lg:rounded-none pb-8 px-4 lg:pb-0 lg:px-0">
+        <h4 className="text-gg-dark-grey text-lg font-bold mb-4 text-center lg:text-left">Categorii:</h4>
         <ul className="flex [&>li]:list-none [&>li>a]:no-underline flex-col">
             {categories.map((category) => (
             <li className="ml-0 mr-0 text-center lg:text-left" key={category.slug}>

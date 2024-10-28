@@ -5,6 +5,8 @@ import ParallaxBackground from './components/Parallax/ParallaxBackground';
 import Image from 'next/image';
 import ArrowButton from './components/ArrowButton/ArrowButton';
 import BeforeAfterSlider from './components/BeforeAfterSlider/BeforeAfterSlider';
+import Link from 'next/link';
+import Carousel from './components/Carusel/Carusel';
 
 const Home = () => {
   useEffect(() => {
@@ -26,138 +28,117 @@ const Home = () => {
   }, []);
 
   return (
-    <>
-      <div className='opacity-20 xs:opacity-100'>
-        <ParallaxBackground
-          imageSrc="/Green-heroes-banner.png"
-          speed={0.5}
-          initialOffset={140} // No jump
-          backgroundPosition="center"
-        />
-      </div>
-      {/* Banner */}
-      <section className="relative height-hero overflow-hidden w-screen">
-        <div className="container lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto px-2 sm:px-8 overflow-hidden z-20 relative flex flex-col items-center text-center">
-            <h1 className="w-full sm:ml-4 md:ml-0 h-2/5 md:h-2/5 justify-center flex z-20 mt-4 xs:mt-[20%] md:mt-12 lg:mt-16 2xl:mt-24 text-gh-dark-green 2xl:text-9xl lg:text-8xl xs:text-7xl text-5xl leading-none">
-              GREEN HEROES
-            </h1>
-            <h3 className="w-full sm:ml-4 md:ml-0 h-3/5 md:h-3/5 text-center z-20 text-gh-dark-grey font-light 2xl:text-5xl lg:text-4xl 2xl:mb-8 sm:text-4xl text-3xl mb-4 mt-4 ">
-              Acționează local, să salvezi global
-            </h3>
-            <p className="sm:w-9/12 sm:ml-4 md:ml-0 h-4/5 md:h-4/5 z-20 2xl:text-lg lg:text-base text-base">
-              Planeta este puternic afectată de activitățile oamenilor și are nevoie de ajutor. Descoperă cum să devii Green Hero, salvează lumea și adu-ți prietenii în echipa ta de supereroi eco!
-            </p>
+    <main className="bg-[#FFF6E7] font-sans">
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between height-screen xl:height-hero relative">
+      <div className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex lg:flex-row flex-col lg:justify-center xl:p-2 sm:px-8 px-4 py-8 md:py-16 lg:py-0 lg:h-screen">
+        <div className="w-full lg:w-1/2 space-y-4 2xl:space-y-6 flex flex-col justify-start lg:justify-center items-center text-center lg:items-start lg:text-left order-2 lg:order-1">
+          <p className="font-semibold text-gg-green text-base sm:text-lg xl:text-xl !mt-1 lg:mt-6 xl:mt-0">Inspirăm tinerii să creeze un viitor sustenabil</p>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl font-bold text-gray-900">Green Generation</h1>
+          <p className='text-base xl:text-lg 2xl:text-xl font-medium leading-1'>
+          Fiecare copil poate fi erou atunci când vine vorba de protejarea mediului. Green Generation îți oferă șansa să înveți despre natură într-un mod interactiv, prin excursii și activități practice, pentru a înțelege cum putem face planeta un loc mai bun.
+          </p>
+          <Link href='/despre-noi'>
+            <button className="py-4 px-10 xl:py-6 xl:px-12 rounded-full  transition duration-300 mt-6 2xl:mt-20">
+            Descoperă aventura verde
+            </button>
+          </Link>
+          <div className='w-full hidden lg:flex flex-row justify-end md:pr-20'>
+            <Image src="/decoratiune-copac.svg" alt="decoratiune copac" width={150} height={184} />
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2">
+          <Image className='lg:absolute lg:right-0 lg:bottom-0 xl:bottom-5 w-full md:w-2/5 lg:w-1/2 xl:w-auto h-full lg:h-[90vh] object-cover' src="/green-generation-m.svg" alt="Green Generation" width={500} height={600} />
+        </div>
         </div>
       </section>
-      {/* Poluarea aerului */}
-      <section className="bg-white w-screen bg-[url('/poluarea-aerului.jpg')] bg-no-repeat bg-contain flex justify-center lg:pt-4 lg:pb-16 xl:pt-12 
-      xl:pb-20 lg:px-8">
-        <div className='container flex lg:flex-row flex-col'>
-          <div className='flex flex-col px-4 pb-16 pt-3 lg:py-0 lg:w-6/12 xl:w-5/12 justify-center'>
-            <div className='flex gap-6'>
-              <div className='flex flex-col gap-5 lg:w-11/12 xl:w-10/12 items-start w-full'>
-                <h3 className='text-5xl w-full flex flex-col items-center text-center lg:text-left lg:items-start'><Image className='lg:mb-4' src="/GH-iconite-probleme-mediu.svg" alt="Iconita poluarea aerului" width={80} height={80} /> Poluarea aerului</h3>
-                <p className='text-base'>Orașul tău e acoperit de poluare, iar aerul greu îți afectează sănătatea și calitatea vieții. Mașinile care circulă pe străzile aglomerate, uzinele care funcționează non-stop și încălzirea locuințelor sunt doar câteva dintre principalele surse de poluare. Poluarea nu se vede doar în aerul pe care îl respirăm, ci și în efectele devastatoare asupra mediului și asupra sănătății tale: creșterea problemelor respiratorii, poluarea solului și a apei, dar și schimbările climatice.
-                <br /><br />
 
-                Pentru a combate acest fenomen, poți face câteva schimbări simple în viața ta.</p>
-                <ArrowButton text="Citește mai multe despre poluarea aerului" href="/blog/cum-sa-reduci-poluarea-aerului/" />
-              </div>
-            </div>
-            <div className='lg:hidden w-full flex justify-center items-center py-8 lg:px-4'>
-              <BeforeAfterSlider
-              beforeImage="/brasovul-verde.jpg" 
-              afterImage="/brasov-poluat.jpg" 
-              />            
+      {/* About Our Mission Section */}
+      <section className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto text-center px-4 lg:px-0 py-20 w-full">
+        <p className="font-semibold text-gg-green">Cu fiecare gând, creezi un viitor sustenabil</p>
+        <h2 className="text-6xl sm:text-6xl font-bold my-4">Misiunea noastră</h2>
+        <p className="max-w-3xl mx-auto">
+        Green Generation vrea să transforme educația despre mediu într-o experiență unică. Copiii nu doar învață teoretic despre problemele de mediu, ci participă activ în excursii și ateliere unde descoperă cum să protejeze natura. Ne dorim să creăm o generație care acționează, nu doar vorbește.
+        </p>
+        <div className="mt-10 flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-6 px-4 lg:px-8 xl:px-0">
+          <div className="bg-gg-bej p-6 rounded-xl shadow-lg w-full xl:max-w-sm text-left">
+            <Image src="/frunza-rosie.svg" alt="Proiecte verzi inovative" width={697} height={1146} className="w-5/6 mx-auto mb-4" />
+            <p className="text-gg-light-grey">Explorează</p>
+            <h3 className="text-3xl font-bold text-gray-900">Aventura începe în natură</h3>
+            <p className="text-gg-text-grey">Îți plac excursiile? Alături de noi, vei descoperi locuri frumoase și vei învăța cum să le păstrezi curate și sănătoase.
+            </p>
           </div>
-            <div className="w-full h-px bg-gh-medium-grey mx-auto my-3 lg:my-8 justify"></div>
-            <div className='flex flex-col'>
-              <h3 className='text-sm uppercase mb-4 mt-2'>Tips & tricks pentru reducerea poluării:</h3>
-              <div className='flex flex-wrap gap-4'>
-                <div className="relative group">
-                    <button className="px-4 py-2">Utilizarea Transportului Public</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/foloseste-transport-public.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Utilizarea transportului public reduce emisiile de carbon.</p>
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <button className="px-4 py-2">Folosirea Bicicletei</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/foloseste-bicicleta.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Bicicleta reduce impactul asupra mediului și îți menține corpul în formă.</p>
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <button className="px-4 py-2">Plantarea Copacilor</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/planteaza-copaci.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Plantarea copacilor ajută la purificarea aerului și la reducerea emisiilor de CO2.</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
+          <div className="bg-gg-bej p-6 rounded-xl shadow-lg w-full xl:max-w-sm text-left">
+            <Image src="/verde-deschis.svg" alt="Educational Resources" width={697} height={1146} className="w-5/6 mx-auto mb-4" />
+            <p className="text-gg-light-grey">Învață</p>
+            <h3 className="text-3xl font-semibold text-gray-900">Lecții practice despre mediu</h3>
+            <p className="text-gg-text-grey">Învață cum să reciclezi, să protejezi resursele naturale și să devii un adevărat protector al planetei.
+            </p>
           </div>
-          <div className='lg:w-6/12 xl:w-7/12 lg:flex justify-center items-center py-16 px-4 hidden'>
-            <BeforeAfterSlider
-            beforeImage="/brasovul-verde.jpg" 
-            afterImage="/brasov-poluat.jpg" 
-            />            
+          <div className="bg-gg-bej p-6 rounded-xl shadow-lg w-full xl:max-w-sm text-left">
+            <Image src="/verde-inchis.svg" alt="Join the Green Generation" width={697} height={1146} className="w-5/6 mx-auto mb-4" />
+            <p className="text-gg-light-grey">Acționează</p>
+            <h3 className="text-3xl font-semibold text-gray-900">Fă un pas spre schimbare</h3>
+            <p className="text-gg-text-grey">În cadrul activităților de grup, vei colabora cu alți tineri pentru a proteja natura și a construi un viitor mai sustenabil.</p>
           </div>
         </div>
       </section>
-{/* Poluarea apelor */}  
-      <section className="lg:px-8 bg-blue-300 w-screen bg-[url('/bg-green-heroes-poluarea-apelor.jpg')] bg-no-repeat bg-cover flex justify-center shadow-md pb-16">
-        <div className='container flex flex-col lg:flex-row'>
-        <div className='lg:w-6/12 xl:w-7/12 w-1/2 mx-auto flex justify-center pt-12 pb-4 px-4'>
-          <Image className="object-contain" src="/green-hero-ape-poluate.png" 
-        alt="Green Hero intalneste ape poluate"
-        width={608} 
-        height={654} ></Image>           
+
+      {/* Ways to Make a Difference Section */}
+      <section className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between lg:px-6 px-4 xl:px-16 py-16 xl:h-[80vh]">
+      <div className="md:w-1/2 space-y-4 xl:space-y-6 h-full flex flex-col justify-center text-center md:text-left">
+          <p className="font-semibold text-gg-text-orange">Fii Activ</p>
+          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight">Cum poți contribui la schimbare?</h2>
+          <p>
+          Fiecare pas mic contează! Participă la evenimentele noastre, implică-te în campanii de protejare a mediului și descoperă resursele educaționale pe care le punem la dispoziție. Alege să fii eroul mediului tău!
+          </p>
+          <Link href="/blog">
+            <button className="text-white transition duration-300">
+              Resurse educaționale
+            </button>
+          </Link>
         </div>
-          <div className='flex flex-col py-4 px-8 lg:w-6/12 xl:w-5/12 justify-center'>
-            <div className='flex gap-6'>
-              <div className='flex flex-col gap-5 items-start'>
-                <h3 className='text-5xl w-full flex flex-col items-center text-center lg:text-left lg:items-start'><Image className="lg:mb-2" src="/icon-poluarea-apelor.svg" alt="Iconita poluarea aerului" width={80} height={80} /> Poluarea apelor</h3>
-                <p className='text-base'>Parcurgând calea marilor descoperiri, pașii te-au purtat către o apă limpede odinioară, acum tulbure și plină de resturi. În adâncurile ei, viețuitoarele se zbăteau pentru supraviețuire. Peștii înotau dezorientați printre sticle de plastic și deșeuri industriale, iar plantele subacvatice care cândva susțineau ecosistemul erau sufocate de un strat gros de chimicale și de reziduuri. Păsările care obișnuiau să se hrănească din apele curate acum zăboveau pe mal, slăbite și dezorientate.
-                  < br />< br />
-                  Ai înțeles atunci că, pentru a le salva, trebuie să iei măsuri. Curățarea apelor și protejarea ecosistemului erau esențiale pentru restabilirea echilibrului. 
-                </p>
-                <ArrowButton text="Citește mai multe despre poluarea apelor" href="/blog/cum-sa-reduci-poluarea-apelor/" />
-              </div>
-            </div>
-            <div className="w-full h-px bg-gh-medium-grey mx-auto mt-8 mb-1 lg:my-8 justify"></div>
-            <div>
-              <h3 className='text-sm mt-2 mb-4 uppercase'>Tips & tricks pentru reducerea poluării:</h3>
-              <div className='flex gap-4 flex-wrap'>
-                <div className="relative group">
-                    <button className="px-4 py-2">Utilizarea Detergenților Biodegradabili</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/folosirea-detergentilor-biodegradabili.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Folosirea detergenților biodegradabili și fără substanțe chimice toxice ajută la protejarea surselor de apă.</p>
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <button className="px-4 py-2">Mai puține pesticide și îngrășăminte</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/mai-putine-pesticide-si-ingrasaminte.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Minimizarea utilizării produselor chimice în agricultură scade riscul de contaminare a apei prin infiltrarea lor în sol și râuri.</p>
-                    </div>
-                  </div>
-                  <div className="relative group">
-                    <button className="px-4 py-2">Reducerea consumului de plastic</button>
-                    <div className="absolute shadow-lg left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 p-4 bg-white text-gh-dark-grey text-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                      <Image src="/reducerea-utilizarii-plasticului.jpg" alt="Public Transport" className="mb-2 rounded-md" width={160} height={206} />
-                      <p className='text-base leading-4'>Evitarea produselor din plastic și utilizarea materialelor reutilizabile previn acumularea acestora în ape, protejând fauna marină și calitatea apei.</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
+        <div className="w-full mt-8 md:mt-0 md:w-1/2 flex justify-end h-full pl-12 lg:pl-0">
+          <Image src="/despre-proiectul-green-generation.svg" alt="Our Founder" width={778} height={759} className="w-full max-w-md" />
+        </div>
+      </section>      
+
+      {/* Explore, Discover, Learn, Connect Section */}
+      <section className="bg-gg-bej-dark px-6 md:px-16 py-20">
+        <div className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex sm:flex-row flex-col space-y-12 sm:space-y-0 justify-around space-x-4">
+          <div className="text-center">
+            <Image src="/explorare.svg" alt="Explore" width={890} height={890} className="w-16 h-16 mx-auto" />
+            <p className="text-lg font-semibold text-gray-900 mt-4">Explorează</p>
+          </div>
+          <div className="text-center">
+            <Image src="/descoperire.svg" alt="Discover" width={890} height={890} className="w-16 h-16 mx-auto" />
+            <p className="text-lg font-semibold text-gray-900 mt-4">Descoperă</p>
+          </div>
+          <div className="text-center">
+            <Image src="/invatare.svg" alt="Learn" width={890} height={890} className="w-16 h-16 mx-auto" />
+            <p className="text-lg font-semibold text-gray-900 mt-4">Invață</p>
+          </div>
+          <div className="text-center">
+            <Image src="/conectare.svg" alt="Connect" width={890} height={890} className="w-16 h-16 mx-auto" />
+            <p className="text-lg font-semibold text-gray-900 mt-4">Acționează</p>
           </div>
         </div>
-        
       </section>
-    </>
+
+{/* Ways to Make a Difference Section */}
+<section className="md:container lg:max-w-screen-lg xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto flex flex-row md:flex-row items-center justify-between lg:px-6 py-16">
+      <div className="space-y-4 lg:space-y-6 flex flex-col items-center w-full text-center">
+          <p className="font-semibold text-gg-green">Fii parte din schimbare</p>
+          <h2 className="text-5xl sm:text-6xl font-bold text-gray-900">Campaniile noastre</h2>
+          <p className='text-center w-8/12'>
+          În următoarele 18 luni, Green Generation va organiza 12 campanii pline de activități practice și excursii educative, toate dedicate protejării mediului. Află mai multe despre fiecare campanie și cum te poți implica!
+          </p>
+          <Carousel />
+        </div>
+
+      </section>      
+
+    </main>
   );
 };
 

@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://green-heroes.info', // Your website URL
+    siteUrl: 'https://green-generation.info', // Your website URL
     generateRobotsTxt: true, // Generate robots.txt file
     sitemapSize: 7000, // Limit the number of URLs per sitemap file (default is 5000)
     changefreq: 'daily',

@@ -25,6 +25,33 @@
 	border: 1px solid red !important;
 } */
 
+
+/* Swiper */
+.swiper-slide {
+	display: flex !important;
+	align-items: stretch;
+	min-height: 480px;
+}
+
+.swiper-button-prev {
+	color: var(--title-color) !important;
+	top: 320px !important;
+}
+
+.swiper-button-next {
+	color: var(--title-color) !important;
+	top: 320px !important;
+} 
+
+.mySwiper {
+	padding-bottom: 40px;
+}
+
+.swiper-pagination-bullet-active {
+
+	background: var(--swiper-pagination-color, var(--green-dark)) !important;
+  }
+
 .graphik {
 	font-family: var(--font-text) !important;
 }
@@ -34,24 +61,24 @@
 }
 
 :root {
-	--text-color: #363636;
-	--title-color: #363636;
-	--text-font-size: 16px;
-	--subtitle-color: #363636;
-	--link-color: #363636;
+	--text-color: #77736D;
+	--title-color: #0E2C34;
+	--text-font-size: 18px;
+	--subtitle-color: #73AB72;
+	--link-color: #73AB72;
 	--link-hover: #7DAC00;
-	--font-text: 'Almarai', sans-serif;
-	--font-titluri: 'Almarai', sans-serif;
+	--font-text: var(--font-ibm-plex-serif);
+	--font-titluri: var(--font-libre-baskerville);
 	--font-weight-h1: 800;
 	--font-weight-h2: 800;
 	--font-weight-subtitles: bold;
 	--font-weight-text: normal;
-	--button-background: #DCFF80;
-	--button-text-color: #303030;
-	--button-border-color: #363636;
+	--button-background: #EC3D28;
+	--button-text-color: #FDD1C5;
+	--button-border-color: #EC3D28;
 	--input-border-color: #9F9F9F;
-	--input-border-radius: 18px;
-	--input-border-focus-color: #7DAC00;
+	--input-border-radius: 72px;
+	--input-border-focus-color: #73AB72;
 	--green: #DCFF80;
 	--green-dark: #7DAC00;
 }
@@ -78,7 +105,7 @@
 
 body {
   font-family: var(--font-text);
-	background-color: #fff;
+	background-color: #FFF6E7;
 }
 
 .main-font {
@@ -541,7 +568,7 @@ button,
 [type="submit"],
 [type="button"] {
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 600;
 	color: var(--button-text-color);
 	text-align: center;
 	white-space: nowrap;
@@ -551,9 +578,9 @@ button,
 	user-select: none;
 	background-color: var(--button-background);
 	/* border: 1px solid var(--button-border-color); */
-	padding: 1rem 1.75rem;
+	padding: 22px 58px;
 	font-size: 1rem;
-	border-radius: 26px;
+	border-radius: var(--input-border-radius);
 	-webkit-transition: all .3s;
 	-o-transition: all .3s;
 	transition: all .3s; }
@@ -568,7 +595,7 @@ button:hover, button:focus,
 [type="button"]:hover,
 [type="button"]:focus {
 	color: white;
-	background-color: var(--green-dark);
+	background-color: var();
 	text-decoration: none; }
 button:not(:disabled),
 [type="submit"]:not(:disabled),

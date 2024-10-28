@@ -29,7 +29,7 @@ export default async function Page({ params }) {
           <section>
           <h1>{title}</h1>
           <div className="pb-4 text-slate-100 z-10">
-            Posted by GreenHeroes, last updated on <Date dateString={ modified } />
+            Posted by Green Generation, last updated on <Date dateString={ modified } />
           </div>
           <div dangerouslySetInnerHTML={{ __html: excerpt }} />
           <div dangerouslySetInnerHTML={{ __html: content }} />
