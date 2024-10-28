@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://green-heroes.info
+Host: https://green-generation.info
 
 # Sitemaps
-Sitemap: https://green-heroes.info/sitemap.xml
+Sitemap: https://green-generation.info/sitemap.xml

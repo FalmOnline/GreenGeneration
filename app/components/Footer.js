@@ -76,7 +76,7 @@ export default function Footer() {
                 {/* <!-- Credentials --> */}
                 <div className="text-sm md:text-xs mt-4 sm:mt-0 flex md:flex-row flex-col justify-center gap-1 w-full text-white text-center">
                     <div><strong>Creat de:</strong></div>
-                    <div>Asociatia Uman |  Școala Gimnazială "Mihai Eminescu" Ighiu | Școala Gimnazială ”Decebal” Cricău</div>
+                    <div>Asociatia Uman |  Școala Gimnazială &quot;Mihai Eminescu&quot; Ighiu | Școala Gimnazială &quot;Decebal&quot; Cricău</div>
                 </div>
             </div>
         </div>
