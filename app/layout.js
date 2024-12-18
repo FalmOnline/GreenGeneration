@@ -56,6 +56,12 @@ export default function RootLayout({ children }) {
 
         {/* Footer */}
         <Footer />
+        {/* reCAPTCHA script */}
+        <Script
+          src={`https://www.gstatic.com/recaptcha/releases/nhamhfA6n_hKMa_Y7UpFyA37/recaptcha__en.js`}
+          integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+          crossOrigin="anonymous"
+        />        
       </body>
     </html>
   );
