@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         {/* CookieYes Banner - placed before Google Analytics */}
         <Script
           id="cookieyes"
-          src="https://cdn-cookieyes.com/client_data/c0fb151c9726ad01a6501640/script.js"
+          src="https://cdn-cookieyes.com/client_data/d00fe1a30bf11647fa2f0c36/script.js"
           type="text/javascript"
           async
         />
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         {/* Google Analytics - placed after CookieYes */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-KVJMC0FDR8`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-E90HRFH5BV`}
         />
         <Script
           id="google-analytics"
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-KVJMC0FDR8', {
+              gtag('config', 'G-E90HRFH5BV', {
                 page_path: window.location.pathname,
               });
             `,
